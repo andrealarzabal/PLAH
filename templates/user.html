@@ -1,0 +1,100 @@
+{%  extends "layout.html"  %}
+
+{% block content %}
+
+<form action="http://localhost:5000/adduser" methods = 'POST'>
+  
+  <div>
+      <label for="inputEmail4">Email</label>
+         <input type="email" class="form-control" id="Email" name="Email" placeholder="Email">
+      
+         <label for="inputPassword4">Password</label>
+         <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Password">
+     
+     <label for="inputAddress">Nacionalidad</label>
+     <input type="text" class="form-control" id="inputAddress" name = "nacionalidad" placeholder="Argentina, Brasil, Chile...">
+  
+       <label for="inputState">Ciudad Actual</label>
+       <select id="inputState" name = "ciudadactual" class="form-control">
+         <option selected>Selecciona</option>
+         <option>Montevideo</option>
+         <option>Canelones</option>
+         <option>Maladonado</option>
+         <option>Rocha</option>
+         <option>Lavalleja</option>
+       </select>
+     
+       
+       <label for="inputZip">Celular</label>
+       <input type="text" class="form-control" id="(+000) 111222333" name = "celular">
+    
+       <input class="form-check-input" type="checkbox" id="gridCheck" name = "ok">
+       <label class="form-check-label" for="gridCheck">
+         Guardar Datos Personales
+       </label>
+   
+ </form>
+
+
+ 
+<!--INTERESES USUARIO-->
+<div class="input-group sm-6">
+   <div class="input-group-prepend">
+     <label class="input-group-text" for="inputGroupSelect01">Grupo</label>
+   </div>
+   <select class="custom-select" id="inputGroupSelect01" name = "visitantes">
+     <option selected>Cuantas personas incluye tu viaje?</option>
+     <option value="1">Una</option>
+     <option value="2">Dos</option>
+     <option value="3">Mas de dos</option><span></span>
+   </select>
+ </div>
+
+<div>
+
+</div>
+ 
+ <div class="input-group sm-6">
+   <select class="custom-select" id="inputGroupSelect02" name = "estadia">
+     <option selected>Cuantos días estarás aquí? ...</option>
+     <option value="1">Entre 1 y 3</option>
+     <option value="2">Entre 4 y 7</option>
+     <option value="3">Mas de 7 días</option>
+   </select>
+   <div class="input-group-append">
+     <label class="input-group-text" for="inputGroupSelect02">Estadía</label>
+   </div>
+ </div>
+ 
+ <div class="input-group sm-3">
+     <div class="input-group-prepend">
+       <label class="input-group-text" for="inputGroupSelect01">Motivaciones</label>
+     </div>
+     <select class="custom-select" id="inputGroupSelect01" name = "motivaciones">
+       <option selected>Que te gustaría mas? </option>
+       <option value="1">Encontrar el mejor restaurante de la ciudad</option>
+       <option value="2">Tomarte una foto con las mejores vistas de la ciudad</option>
+       <option value="3">Ver un espectáculo cultural que te deje boquiabiertx!</option>
+     </select>
+   </div>
+   
+   <div class="input-group mb-3">
+     <select class="custom-select" lenght="" id="inputGroupSelect02" name = "preferencias">
+       <option selected>Que prefieres?</option>
+       <option value="1">Paisajes</option>
+       <option value="2">Vida nocturna</option>
+       <option value="3">Museos</option>
+     </select>
+     <div class="input-group-append">
+       <label class="input-group-text" for="inputGroupSelect02">Preferencias</label>
+     </div>
+   </div>
+
+   <button type="submit" class="btn btn-primary">Registrarme </button>  
+
+ </div>  
+   
+
+      </form>
+
+{% endblock %}

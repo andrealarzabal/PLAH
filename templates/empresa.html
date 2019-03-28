@@ -1,0 +1,58 @@
+{%  extends "layout.html"  %}
+
+{% block content %}
+
+<form action="http://localhost:5000/addempresa" methods = 'POST'>
+  
+  <div>
+      <label for="inputEmail4">Email</label>
+         <input type="email" class="form-control" id="Email" name="email" placeholder="Email">
+      
+         <label for="inputPassword4">Constraseña</label>
+         <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Contraseña">
+     
+     <label for="inputAddress">Razón Social</label>
+     <input type="text" class="form-control" id="inputAddress" name = "razon social" placeholder="...">
+  
+     <label for="inputAddress">Nombre Comercial</label>
+     <input type="text" class="form-control" id="inputAddress" name = "nombre comercial" placeholder="...">
+  
+     
+       
+       <label for="inputZip">Nro de RUT</label>
+       <input type="text" class="form-control" id="(+000) 111222333" name = "RUT" placeholder="...">
+    
+       <input class="form-check-input" type="checkbox" id="gridCheck" name = "ok">
+       <label class="form-check-label" for="gridCheck">
+         Guardar Datos Empresa
+       </label>
+       
+       
+       <div class="form-group col-md-4">
+            <label for="inputState">Rubro</label>
+            <select id="inputState" name="rubro" class="form-control">
+              <option selected>Elige...</option>
+              <option>Gastronomía y bares</option>
+              <option>Transporte</option>
+              <option>Cine</option>
+              <option>Teatro</option>
+              <option>Museo</option>
+              <option>Guía Turístico</option>
+              <option>Fotografía</option>
+              <option>Local de espectáculos</option>
+              <option>Club deportivo</option>
+              <option>Otro...</option>
+            </select>
+          </div>
+        </div>
+
+
+      <button type="submit" class="btn btn-primary">Registrarse</button>  
+         
+ </form>
+
+
+ 
+
+
+{% endblock %}
